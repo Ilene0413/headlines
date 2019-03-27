@@ -186,6 +186,8 @@ app.post("/delarticles/:id/:commentId", function (req, res) {
 
 
 // Start the server
-app.listen(PORT, function () {
-  console.log("App running on port " + PORT + "!");
-});
+app.listen(process.env.PORT || PORT)
+
+// app.listen(PORT, function () {
+//   console.log("App running on port " + PORT + "!");
+// });
