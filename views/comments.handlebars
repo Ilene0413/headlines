@@ -1,0 +1,43 @@
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                {{#if imgLink}}
+                <img src="{{this.imgLink}}" width=200 height=200>
+                {{/if}}
+                <h1>{{this.headline}}</h1>
+                {{#if hedCat}}
+                <h6>{{this.hedCat}}</h6>
+                {{/if}}
+                <p data-id="{{this.id}}">{{this.summary}}</p>
+                <br>
+                </ul>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5 comments">
+                <ul>
+                    {{#if comments}}
+                    {{#each comments}}
+                    <p>
+                        {{this.comment}}
+                        <button class="deleteComment" article-id="{{this.id}}">Delete Comment</button>
+
+                    </p>
+                    {{/each}}
+                    {{/if}}
+                </ul>
+                <form class="create-form">
+                    <div class="form-group">
+                        <label for="cmt"></label>
+                        <input type="text" id="cmt" user_comments="user_comments">
+                    </div>
+                    <button type="submit">Submit Comment</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</div>

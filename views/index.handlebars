@@ -1,0 +1,60 @@
+<div>
+    <div class="jumbotron jumbotron-fluid"
+        style="background-image: url(assets/images/stack-of-newspapers-istock-bernie_photo.jpg)">
+        <div class="container">
+            <img src="assets/images/boston-globe-logo.jpg" alt="boston globe">
+        </div>
+    </div>
+
+    <br>
+    <div class="container" style="background-color:rgb(191, 203, 214)">
+        <div class="row">
+            <div id="mainPage">
+                <div class="col-md-12">
+                    <h1 class="text-center">Today's Headlines:</h1>
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul>
+                            {{#each articles}}
+                            <h2>{{this.headline}}</h2>
+                            {{#if this.hedCat}}
+                            <p>{{this.hedCat}}</p>
+                            {{/if}}
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-4">
+                                    {{#if imgLink}}
+                                    <img src="{{this.imgLink}}" width=300 height=300>
+                                    {{/if}}
+                                </div>
+                                <div class="col-md-6">
+                                    <p>
+                                        {{this.summary}}<i>...read more</i>
+                                        <a href="http://www.bostonglobe.com/{{this.link}}">{{this.link}} </a><br>
+                                        <i class="readComments" data-id="{{this.id}}" style="color:blue">...read/add comments</i>
+                                    </p>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            <br><br>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <div id="articleInfo">
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+                    <div id="articleComments">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
