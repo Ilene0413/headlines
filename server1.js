@@ -97,7 +97,7 @@ app.get("/scraped", function (req, res) {
 
       });
       console.log(`scrape complete`);
-      res.json(articles);
+       res.json(articles);
 
     })
     .catch(function (error) {
@@ -186,7 +186,8 @@ app.post("/delarticles/:id/:commentId", function (req, res) {
 
 
 // Start the server
-app.listen(process.env.PORT || PORT)
-// app.listen(PORT, function () {
-//   console.log("App running on port " + PORT + "!");
-// });
+// app.listen(process.env.PORT || PORT)
+
+app.listen(PORT, function () {
+  console.log("App running on port " + PORT + "!");
+});

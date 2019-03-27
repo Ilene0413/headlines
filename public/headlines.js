@@ -13,6 +13,7 @@ $(document).ready(function () {
         })
             // With that done, add the articles to the page
             .then(function (data) {
+                console.log("scraped articles complete");
                 window.location = "/articles";
             });
     });
